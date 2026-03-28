@@ -1,17 +1,16 @@
-# real-time-audio-analyzer
-Real-time audio frequency analyzer using Python and FFT with live visualization
-# 🎧 Real-Time Audio Analyzer
+# 🎧 Real-Time Audio Analyzer (Waveform + FFT)
 
-A real-time audio frequency analyzer built using Python and Fast Fourier Transform (FFT).  
-This project captures live microphone input and visualizes the frequency spectrum dynamically.
+A real-time audio signal processing project built using Python.  
+This system captures live microphone input and visualizes both the **waveform (time domain)** and **frequency spectrum (FFT)**.
 
 ---
 
 ## 🚀 Features
 - 🎤 Live audio input from microphone  
-- 📊 Real-time frequency spectrum visualization  
-- ⚡ Fast Fourier Transform (FFT) processing  
-- 🖥️ Simple and clean interface  
+- 📊 Real-time waveform visualization  
+- 🎧 Real-time frequency spectrum (FFT)  
+- ⚡ Fast Fourier Transform for signal analysis  
+- 🖥️ Interactive and dynamic graphs  
 
 ---
 
@@ -19,23 +18,30 @@ This project captures live microphone input and visualizes the frequency spectru
 - Python  
 - NumPy  
 - Matplotlib  
-- PyAudio (or sounddevice)
+- sounddevice  
+
+---
+
+## 📸 Output Preview
+
+### 🔹 Waveform (Time Domain)
+Shows how audio signal varies with time.
+
+### 🔹 Frequency Spectrum (FFT)
+Shows frequency components present in the audio signal.
 
 ---
 
 ## 📌 How It Works
-The system captures real-time audio signals through the microphone and applies FFT to convert time-domain signals into frequency-domain data.  
-This data is then plotted dynamically to display sound frequencies visually.
+1. Captures audio input using microphone  
+2. Converts signal from time domain → frequency domain using FFT  
+3. Displays both waveform and frequency spectrum in real-time  
 
 ---
 
-## 🎯 Future Improvements
-- Add GUI (Tkinter / PyQt)  
-- Improve visualization UI  
-- Add recording & playback  
-- Deploy as a desktop app  
+## ▶️ How to Run
 
----
-
-## 👨‍💻 Author
-Affan Ahmad
+```bash
+pip install numpy matplotlib sounddevice
+python main.py   # for waveform
+python fft.py    # for frequency analyzer
